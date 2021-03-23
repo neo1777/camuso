@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'screens/lesson28.dart';
+import 'screens/lesson29.dart';
+import './utils/utils.dart';
 
 void main() => runApp(MyApp1777());
 
 class MyApp1777 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(Utils.getInfo(context));
     return MaterialApp(
-      title: 'Keys demo 1777',
+      title: 'Context demo 1777',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyLesson28Page(title: 'Keys Demo'),
+      home: MyLesson29Page(title: 'Context Demo'),
     );
   }
 }
