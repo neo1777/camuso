@@ -15,6 +15,45 @@ class _MyHomePageState extends State<MyLesson27Page> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: null);
+        body: Column(
+          children: <Widget>[
+            Icon(Icons.delete),
+            Icon(Icons.delete_forever),
+            Icon(Icons.delete_forever_outlined),
+            Icon(Icons.delete_forever_rounded),
+            Expanded(child: LayoutBuilder(builder: (context, constrains) {
+              return GridView.count(
+                crossAxisCount: constrains.biggest.width > 500 ? 8 : 4,
+                children: <Widget>[
+                  Icon(Icons.ac_unit),
+                  Icon(Icons.sanitizer),
+                  Icon(Icons.face),
+                  Icon(Icons.hail),
+                  Icon(Icons.radio_button_checked_outlined),
+                  Icon(Icons.keyboard),
+                ],
+              );
+            }))
+          ],
+        )
+        // OrientationBuilder(
+        //   builder: (context, orientation) {
+        //     return GridView.count(
+        //       crossAxisCount: orientation == Orientation.portrait ? 4 : 8,
+        //       children: <Widget>[
+        //         Icon(Icons.ac_unit),
+        //         Icon(Icons.sanitizer),
+        //         Icon(Icons.face),
+        //         Icon(Icons.hail),
+        //         Icon(Icons.radio_button_checked_outlined),
+        //         Icon(Icons.keyboard),
+        //       ],
+        //     );
+        //     // orientation == Orientation.portrait
+        //     //     ? Text('Schermo verticale')
+        //     //     : Text('Schermo orizzontale');
+        //   },
+        // ),
+        );
   }
 }
